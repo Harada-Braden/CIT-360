@@ -76,17 +76,15 @@ public class ThreadsRunnersAndExecutables {
     executor();
     }
     
-    
-    
 private static void executor() {
     {
-        // Starts the Executor
+    // Starts the Executor
     ExecutorService executor = Executors.newSingleThreadExecutor();
     executor.submit(() -> {
     String threadName = Thread.currentThread().getName();
     System.out.println("Starting next " + threadName);
     
-    //shuts it down
+    // Shuts down the Executor
     executor.shutdownNow();
     }
     );
@@ -95,16 +93,17 @@ private static void executor() {
     
 }
     
-    
-
     private static void sleep() {
+        // This is the Sleep funtion
         Runnable runnable = () -> {
     try {
         String name = Thread.currentThread().getName();
         System.out.println("Second " + name);
-        Thread.sleep(1250);
+        // This time is in milliseconds and can be modified
+        Thread.sleep(500);
         System.out.println("Third " + name);
     }
+    // If the function faults, it will catch the Exception with this code
     catch (InterruptedException e) {
         e.printStackTrace();
     }
@@ -115,4 +114,3 @@ thread.start();
 }
     
 }
-
