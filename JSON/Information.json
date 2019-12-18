@@ -1,0 +1,19 @@
+{
+    "lName":"Harada",
+    "fName":"Braden"
+    "address":{
+        "street":"2618 Colfax Dr.",
+        "city":"Caldwell",
+        "state":"ID",
+        "zip":"83607"
+    },
+     "age":37,
+     "phoneNumbers":[
+            {
+            "type":"mobile", "number":"(208) 412-7588"
+            },
+         {
+            "type":"home", "number":"(208) 921-7457"
+         }
+     ],
+}
